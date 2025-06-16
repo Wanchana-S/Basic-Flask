@@ -1,0 +1,22 @@
+{% include 'layout.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>แบบฟอร์มติดต่อแอดมิน</h2>
+        <form action="{{url_for('signupForm')}}" method="GET">
+            <div class="mb-3">
+                <label for="name" class="form-label">ชื่อ:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">อีเมล:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">ข้อความ:</label>
+                <textarea class="form-control" id="description" name="description" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success" value="ส่งข้อความ">ส่งข้อความ</button>
+        </form>
+    </div>
+{% endblock %}
